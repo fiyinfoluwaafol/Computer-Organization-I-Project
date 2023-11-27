@@ -46,3 +46,13 @@ illegal:
     jal print_string        # Print the error message
 
     j input_loop            # Repeat input loop
+
+fibonacci_sequence:
+    # Step 2: Print the first N numbers in the Fibonacci sequence
+    li $t2, 0               # Initialize fib(0) = 0
+    li $t3, 1               # Initialize fib(1) = 1
+    li $t4, 2               # Initialize counter at 2 (already printed 0 and 1)
+
+    # Print 0 and 1 separately
+    la $a0, fib_msg         # Load address of Fibonacci message
+    jal print_string        # Print the message
