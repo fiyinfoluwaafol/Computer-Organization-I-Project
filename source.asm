@@ -36,3 +36,11 @@ input_loop:
 
     # N is legal, proceed to Step 2
     j fibonacci_sequence    # Jump to calculate Fibonacci sequence
+
+illegal:
+    # Print error message for illegal number
+    la $a0, invalid_msg     # Load address of the error message
+    jal print_string        # Print the error message
+
+    la $a0, prompt     # Load address of the prompt message
+    jal print_string        # Print the error message
