@@ -63,3 +63,7 @@ fibonacci_sequence:
 
     la $a0, comma	    # Prints a comma between 0 and 1
     jal print_string
+
+    li $v0, 1               # Print 1
+    move $a0, $t3
+    syscall
