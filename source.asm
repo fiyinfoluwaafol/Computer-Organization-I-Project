@@ -75,3 +75,7 @@ fib_loop:
 
     la $a0, comma	    # Prints a comma between numbers
     jal print_string
+
+    li $v0, 1               # Print the calculated Fibonacci number
+    move $a0, $t5
+    syscall
