@@ -79,3 +79,10 @@ fib_loop:
     li $v0, 1               # Print the calculated Fibonacci number
     move $a0, $t5
     syscall
+
+    # Update Fibonacci numbers for next iteration
+    move $t2, $t3           # fib(n-2) becomes fib(n-1)
+    move $t3, $t5           # fib(n-1) becomes fib(n)
+    addi $t4, $t4, 1        # Increment counter
+
+    j fib_loop              # Repeat Fibonacci calculation loop
