@@ -29,3 +29,10 @@ main:
 input_loop:
     jal read_int            # Read user input
     move $t0, $v0           # Store N in $t0
+
+# Check if N is legal (N >= 25)
+    li $t1, 25              # Load 25 into $t1
+    blt $t0, $t1, illegal   # If N < 25, branch to illegal
+
+    # N is legal, proceed to Step 2
+    j fibonacci_sequence    # Jump to calculate Fibonacci sequence
