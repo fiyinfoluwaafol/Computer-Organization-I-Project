@@ -67,3 +67,11 @@ fibonacci_sequence:
     li $v0, 1               # Print 1
     move $a0, $t3
     syscall
+
+fib_loop:
+    bge $t4, $t0, end_fib   # If counter >= N, end Fibonacci sequence
+
+    add $t5, $t2, $t3       # Calculate fib(n) = fib(n-1) + fib(n-2)
+
+    la $a0, comma	    # Prints a comma between numbers
+    jal print_string
