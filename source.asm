@@ -56,3 +56,10 @@ fibonacci_sequence:
     # Print 0 and 1 separately
     la $a0, fib_msg         # Load address of Fibonacci message
     jal print_string        # Print the message
+
+    li $v0, 1               # Print 0
+    move $a0, $t2
+    syscall
+
+    la $a0, comma	    # Prints a comma between 0 and 1
+    jal print_string
