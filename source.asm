@@ -86,3 +86,7 @@ fib_loop:
     addi $t4, $t4, 1        # Increment counter
 
     j fib_loop              # Repeat Fibonacci calculation loop
+
+end_fib:
+    li $v0, 10              # Exit program
+    syscall
