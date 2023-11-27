@@ -17,16 +17,3 @@ print_string:
 read_int:
     li $v0, 5               # System call for read_int (code 5)
     syscall
-    jr $ra                  # Return
-
-# Function to print an integer
-print_int:
-    li $v0, 1               # System call for print_int (code 1)
-    syscall
-    jr $ra                  # Return
-
-# Main program
-main:
-    # Step 1: Prompt user for input
-    la $a0, prompt          # Load address of the prompt
-    jal print_string        # Print the prompt
