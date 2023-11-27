@@ -44,3 +44,5 @@ illegal:
 
     la $a0, prompt     # Load address of the prompt message
     jal print_string        # Print the error message
+
+    j input_loop            # Repeat input loop
