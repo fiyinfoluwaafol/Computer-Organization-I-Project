@@ -17,3 +17,4 @@ print_string:
 read_int:
     li $v0, 5               # System call for read_int (code 5)
     syscall
+    jr $ra                  # Return
